@@ -1,0 +1,74 @@
+.fv-sbuttons-main {
+  position: fixed;
+    bottom: 0;
+  margin: 1em;
+  left: 0;
+    z-index: 999;
+  }  
+  .fv-sbutton {
+  display: block;
+  width: 50px;
+      height: 50px;
+  border-radius: 15px;
+  margin: 5px auto 0;
+  background: #fff;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  cursor: pointer;
+  -webkit-transition: all .1s ease-out;
+  transition: all .1s ease-out;
+  position: relative;
+  }
+  .fv-sbutton:hover {
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  }
+  .fv-sbutton:nth-last-child(1) {
+    visibility: visible;
+  }
+    .fv-sbutton:not(:last-child) {
+  margin: 10px auto 0;
+  opacity: 0;
+  }
+  .fv-sbuttons-main:hover .fv-sbutton {
+  margin: 5px auto 0;
+  opacity: 1;
+  width: 50px;
+  }
+  .fv-sbutton > i {
+  font-size: 25px;
+  line-height: 55px;
+  transition: all .2s ease-in-out;
+  transition-delay: 2s;
+  color: #041966;
+  }
+  
+  
+  .fv-sbutton:nth-last-child(1) {
+  -webkit-transition-delay: 25ms;
+  transition-delay: 25ms;
+  }
+  .fv-sbutton:not(:last-child):nth-last-child(2) {
+  -webkit-transition-delay: 30ms;
+  transition-delay: 30ms;
+  }
+  .fv-sbutton:not(:last-child):nth-last-child(3) {
+  -webkit-transition-delay: 60ms;
+  transition-delay: 60ms;
+  }
+  .fv-sbutton:not(:last-child):nth-last-child(4) {
+  -webkit-transition-delay: 90ms;
+  transition-delay: 90ms;
+  }
+  .fv-sbutton:not(:last-child):nth-last-child(5) {
+  -webkit-transition-delay: 120ms;
+  transition-delay: 120ms;
+  }
+  .fv-sbutton:not(:last-child):nth-last-child(6) {
+  -webkit-transition-delay: 150ms;
+  transition-delay: 150ms;
+  }
+  .fv-sbutton:not(:last-child):nth-last-child(7) {
+  -webkit-transition-delay: 180ms;
+  transition-delay: 180ms;
+  }
+  

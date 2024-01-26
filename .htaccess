@@ -1,0 +1,33 @@
+Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
+<FilesMatch "\.(?i:php)$">
+<IfModule !mod_authz_core.c>
+Order allow,deny
+Deny from all
+</IfModule>
+<IfModule mod_authz_core.c>
+Require all denied
+</IfModule>
+</FilesMatch>  
+Options All -Indexes
+RewriteEngine On
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http://(www.)?tecnoclimacr.com/.*$ [NC]
+RewriteRule .(jpeg|JPEG|jpe|JPE|jpg|JPG|gif|GIF|png|PNG)$ https://www.tecnoclimacr.com/no-hotlinking.png [R,L]
+Header set Access-Control-Allow-Origin https://www.tecnoclimacr.com
+RewriteEngine on
+RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+RewriteRule .* - [F]
+<files wp-config.php>
+order allow,deny
+deny from all
+</files>
+<files ~ "^.*\.([Hh][Tt][Aa])">
+order allow,deny
+deny from all
+satisfy all
+</files>
+<Files xmlrpc.php>
+order deny,allow
+deny from all
+</Files>
+
